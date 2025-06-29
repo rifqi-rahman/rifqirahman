@@ -264,7 +264,7 @@ body {
 
 /* Portfolio Section */
 .portfolio {
-    padding: 100px 0;
+    padding: 2% 0 4%;
     background: #fff;
     border-top: 2px dashed #333;
 }
@@ -273,7 +273,7 @@ body {
     font-size: 48px;
     font-weight: 400;
     text-align: center;
-    margin-bottom: 25px;
+    margin-bottom: 15px;
     color: #333;
     font-style: normal;
 }
@@ -299,12 +299,12 @@ body {
 .portfolio-column h3 {
     font-size: 20px;
     font-weight: 500;
-    margin-bottom: 40px;
+    margin-bottom: 25px;
     color: #333;
 }
 
 .personal-design-title {
-    margin-top: 50px !important;
+    margin-top: 35px !important;
 }
 
 .portfolio-items {
@@ -349,7 +349,7 @@ body {
 
 /* Education Section */
 .education {
-    padding: 100px 0;
+    padding: 2% 0 3%;
     background: #f8f9fa;
     border-top: 2px dashed #333;
 }
@@ -365,7 +365,7 @@ body {
 .education-column h3 {
     font-size: 20px;
     font-weight: 500;
-    margin-bottom: 40px;
+    margin-bottom: 25px;
     color: #333;
 }
 
@@ -386,6 +386,7 @@ body {
     border-radius: 8px;
     overflow: hidden;
     flex-shrink: 0;
+    margin-top: 2%;
 }
 
 .timeline-icon img {
@@ -396,8 +397,8 @@ body {
 
 .timeline-content h4 {
     font-size: 18px;
-    font-weight: 600;
-    margin-bottom: 8px;
+    font-weight: 100;
+    margin-bottom: 1%;
     color: #333;
 }
 
@@ -405,14 +406,14 @@ body {
     font-size: 18px;
     color: #333;
     font-style: italic;
-    margin-bottom: 8px;
+    margin-bottom: 1%;
     display: block;
     font-weight: 400;
 }
 
 .timeline-date {
-    font-size: 14px;
-    color: #666;
+    font-size: 18px;
+    color: #767676;
 }
 
 .certifications {
@@ -432,6 +433,7 @@ body {
     border-radius: 8px;
     overflow: hidden;
     flex-shrink: 0;
+    margin-top: 2%;
 }
 
 .cert-icon img {
@@ -442,8 +444,8 @@ body {
 
 .cert-content h4 {
     font-size: 18px;
-    font-weight: 600;
-    margin-bottom: 8px;
+    font-weight: 100;
+    margin-bottom: 1%;
     color: #333;
 }
 
@@ -455,13 +457,13 @@ body {
 }
 
 .cert-date {
-    font-size: 14px;
-    color: #666;
+    font-size: 18px;
+    color: #767676;
 }
 
 /* Notes Section */
 .notes {
-    padding: 100px 0;
+    padding: 2% 0 5%;
     background: #fff;
     border-top: 2px dashed #333;
 }
@@ -530,7 +532,7 @@ body {
 
 /* Contact Section */
 .contact {
-    padding: 100px 0;
+    padding: 2% 0 5%;
     background: #f8f9fa;
     border-top: 2px dashed #333;
 }
@@ -583,6 +585,21 @@ body {
     width: 100%;
     height: 100%;
     object-fit: contain;
+}
+
+/* Thank You Section */
+.thank-you-section {
+    padding: 2% 0 3%;
+    background: #fff;
+    border-top: 2px dashed #333;
+    text-align: center;
+}
+
+.thank-you-title {
+    font-size: 48px;
+    font-weight: 400;
+    color: #333;
+    font-style: italic;
 }
 
 /* Footer */
@@ -670,6 +687,10 @@ body {
         text-align: center;
     }
     
+    .contact-social {
+        justify-content: center;
+    }
+    
     .logo-icon.large {
         width: 80px;
         height: 80px;
@@ -702,7 +723,7 @@ body {
     }
     
     .section-title {
-        font-size: 28px;
+        font-size: 15px;
     }
     
     .section-subtitle {

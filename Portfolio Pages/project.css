@@ -1,0 +1,410 @@
+/* 
+ * Shared Project Page Styles
+ * This file provides styling for all portfolio project pages
+ * Inherits from main styles.css for consistency
+ */
+
+/* Back Button */
+.back-button-container {
+    padding: 120px 0 20px 0;
+    background: #fff;
+}
+
+.back-button-container .container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 40px;
+}
+
+.back-button {
+    font-size: 18px;
+    color: #333;
+    text-decoration: none;
+    font-weight: 400;
+    transition: color 0.3s ease;
+}
+
+.back-button:hover {
+    color: #666;
+}
+
+/* Project Header */
+.project-header {
+    padding: 60px 0 100px 0;
+    background: #fff;
+}
+
+.project-intro {
+    display: grid;
+    grid-template-columns: 1.2fr 400px;
+    gap: 80px;
+    align-items: start;
+}
+
+.project-title {
+    font-size: 48px;
+    font-weight: 400;
+    color: #333;
+    margin-bottom: 25px;
+    line-height: 1.2;
+    font-style: normal;
+}
+
+.project-description {
+    font-size: 18px;
+    line-height: 1.6;
+    color: #333;
+    margin-bottom: 80px;
+    font-style: italic;
+    font-weight: 400;
+}
+
+.project-meta {
+    display: flex;
+    flex-direction: column;
+    gap: 40px;
+}
+
+.project-role,
+.project-contributors {
+    font-size: 18px;
+    line-height: 1.4;
+}
+
+.project-role strong,
+.project-contributors strong {
+    font-weight: 500;
+    color: #333;
+}
+
+.project-role em {
+    font-style: italic;
+    color: #333;
+}
+
+.contributor-avatars {
+    display: flex;
+    gap: 10px;
+    margin-top: 12px;
+}
+
+.avatar {
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    overflow: hidden;
+    border: 2px solid #ddd;
+}
+
+.avatar img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.project-image {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.image-placeholder {
+    width: 100%;
+    max-width: 400px;
+    aspect-ratio: 4/3;
+    background: #CCCCCC;
+    border-radius: 12px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border: 2px solid #999;
+}
+
+/* Project Sections */
+.project-section {
+    padding: 100px 0;
+    background: #fff;
+    border-top: 2px dashed #333;
+}
+
+.project-section .section-title {
+    font-size: 48px;
+    font-weight: 400;
+    color: #333;
+    margin-bottom: 15px;
+    text-align: center;
+    font-style: normal;
+}
+
+.project-section .section-subtitle {
+    font-size: 18px;
+    text-align: center;
+    color: #333;
+    margin-bottom: 80px;
+    font-style: italic;
+    line-height: 1.6;
+    font-weight: 400;
+}
+
+.section-content {
+    display: grid;
+    grid-template-columns: 2fr 1fr;
+    gap: 80px;
+    align-items: start;
+}
+
+.section-text {
+    font-size: 18px;
+    line-height: 1.6;
+    color: #333;
+    font-weight: 400;
+}
+
+.section-sidebar {
+    position: sticky;
+    top: 120px;
+}
+
+.problem-list h3 {
+    font-size: 18px;
+    font-weight: 500;
+    color: #333;
+    margin-bottom: 30px;
+}
+
+.problem-list ol {
+    padding-left: 24px;
+}
+
+.problem-list li {
+    margin-bottom: 16px;
+    font-size: 18px;
+    line-height: 1.4;
+}
+
+.problem-list strong {
+    font-weight: 500;
+    color: #333;
+}
+
+.problem-list em {
+    font-style: italic;
+    color: #666;
+}
+
+/* Solution Section */
+.solution-content {
+    display: grid;
+    grid-template-columns: 1.2fr 400px;
+    gap: 80px;
+    align-items: start;
+}
+
+.solution-text {
+    font-size: 18px;
+    line-height: 1.6;
+    color: #333;
+    font-weight: 400;
+}
+
+.solution-text strong {
+    font-weight: 500;
+}
+
+.solution-image {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+/* Documentation Section */
+.documentation-content {
+    display: flex;
+    flex-direction: row;
+    gap: 80px;
+    align-items: flex-start;
+    /* Prevent transforms from affecting layout */
+    transform: none !important;
+    contain: layout;
+}
+
+.doc-links {
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+    max-width: 400px;
+    flex-shrink: 0;
+}
+
+.doc-link-item {
+    font-size: 18px;
+    line-height: 1.4;
+}
+
+.doc-link-item strong {
+    font-weight: 500;
+    color: #333;
+}
+
+.doc-link {
+    color: #0066cc;
+    text-decoration: underline;
+    font-size: 18px;
+    transition: color 0.3s ease;
+}
+
+.doc-link:hover {
+    color: #0052a3;
+}
+
+.documentation-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 10px;
+    flex: 1;
+    /* Prevent size changes from transforms */
+    transform: none !important;
+    width: 100%;
+    max-width: 600px;
+}
+
+.doc-image {
+    aspect-ratio: 4/3;
+    background: #CCCCCC;
+    border-radius: 12px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border: 2px solid #999;
+    /* Ensure consistent sizing */
+    width: 100%;
+    height: auto;
+    min-height: 0;
+}
+
+.doc-image .image-placeholder {
+    width: 100%;
+    height: 100%;
+    max-width: none;
+    border: none;
+    border-radius: 10px;
+    /* Prevent image from growing */
+    object-fit: cover;
+    flex-shrink: 0;
+}
+
+/* Thank You Section */
+.thank-you-section {
+    padding: 100px 0;
+    background: #fff;
+    border-top: 2px dashed #333;
+    text-align: center;
+}
+
+.thank-you-title {
+    font-size: 48px;
+    font-weight: 400;
+    color: #333;
+    font-style: italic;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .back-button-container .container {
+        padding: 0 20px;
+    }
+    
+    .project-intro {
+        grid-template-columns: 1fr;
+        gap: 50px;
+    }
+    
+    .project-title {
+        font-size: 36px;
+    }
+    
+    .project-description {
+        font-size: 18px;
+        margin-bottom: 60px;
+    }
+    
+    .project-meta {
+        gap: 30px;
+    }
+    
+    .project-role,
+    .project-contributors {
+        font-size: 18px;
+    }
+    
+    .avatar {
+        width: 35px;
+        height: 35px;
+    }
+    
+    .section-content {
+        grid-template-columns: 1fr;
+        gap: 50px;
+    }
+    
+    .section-sidebar {
+        position: static;
+    }
+    
+    .solution-content {
+        grid-template-columns: 1fr;
+        gap: 50px;
+    }
+    
+    .documentation-grid {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 20px;
+    }
+    
+    .project-section .section-title,
+    .thank-you-title {
+        font-size: 36px;
+    }
+    
+    .section-text,
+    .solution-text {
+        font-size: 18px;
+    }
+    
+    .problem-list h3 {
+        font-size: 18px;
+    }
+    
+    .problem-list li {
+        font-size: 18px;
+    }
+}
+
+@media (max-width: 480px) {
+    .back-button-container {
+        padding-top: 90px;
+    }
+    
+    .project-title {
+        font-size: 28px;
+    }
+    
+    .project-description {
+        font-size: 18px;
+    }
+    
+    .documentation-grid {
+        grid-template-columns: 1fr;
+        gap: 15px;
+    }
+    
+    .project-section .section-title,
+    .thank-you-title {
+        font-size: 28px;
+    }
+    
+    .section-text,
+    .solution-text {
+        font-size: 18px;
+    }
+}

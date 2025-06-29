@@ -108,6 +108,11 @@ const observer = new IntersectionObserver((entries) => {
 document.addEventListener('DOMContentLoaded', () => {
     const sections = document.querySelectorAll('section');
     sections.forEach(section => {
+        // Skip sections with documentation content to prevent layout issues
+        if (section.querySelector('.documentation-content')) {
+            return;
+        }
+        
         section.style.opacity = '0';
         section.style.transform = 'translateY(30px)';
         section.style.transition = 'opacity 0.6s ease, transform 0.6s ease';
