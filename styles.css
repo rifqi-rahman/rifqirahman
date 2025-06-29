@@ -70,7 +70,8 @@ body {
 }
 
 .nav-link:hover {
-    color: #666;
+    text-decoration: underline;
+    color: #0000FF;
 }
 
 .nav-logo {
@@ -331,13 +332,13 @@ body {
 
 .item-title {
     color: #333;
-    text-decoration: underline;
     font-weight: 500;
     font-size: 18px;
 }
 
 .item-title:hover {
-    color: #666;
+    color: #0000FF;
+    text-decoration: underline;
 }
 
 .item-description {
