@@ -95,8 +95,8 @@ portfolio-website/
 
 For questions about this website implementation, please contact:
 - Email: rifqi.effaris@gmail.com
-- LinkedIn: [linkedin.com/in/rifqirahman](https://linkedin.com/in/rifqirahman)
-- GitHub: [github.com/rifqirahman](https://github.com/rifqirahman)
+- LinkedIn: [linkedin.com/in/rifqirahman](https://www.linkedin.com/in/muhammad-rifqi-rahman-professional/)
+- GitHub: [github.com/rifqirahman](http://github.com/rifqi-rahman)
 
 ---
 
