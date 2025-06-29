@@ -1,6 +1,6 @@
 # Rifqi Rahman - Portfolio Website
 
-A modern, responsive portfolio website showcasing Rifqi Rahman's work as a Creative Designer and Developer.
+A 2000s style, responsive portfolio website showcasing Rifqi Rahman's work as a Creative Designer and Developer.
 
 ## Features
 
