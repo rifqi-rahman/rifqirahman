@@ -540,7 +540,8 @@ body {
 }
 
 .note-link:hover {
-    color: #666;
+    color: #0000FF;
+    text-decoration: underline;
 }
 
 /* Contact Section */

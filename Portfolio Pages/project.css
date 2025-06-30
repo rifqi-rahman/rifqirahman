@@ -25,7 +25,7 @@
 }
 
 .back-button:hover {
-    color: #666;
+    color: #0000FF;
 }
 
 /* Project Header */
@@ -169,7 +169,7 @@
     font-size: 18px;
     font-weight: 500;
     color: #333;
-    margin-bottom: 30px;
+    margin-bottom: 20px;
 }
 
 .problem-list ol {
@@ -254,7 +254,7 @@
 }
 
 .doc-link:hover {
-    color: #0052a3;
+    color: #0000FF;
 }
 
 .documentation-grid {
