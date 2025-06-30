@@ -223,9 +223,20 @@
     flex-direction: row;
     gap: 80px;
     align-items: flex-start;
-    /* Prevent transforms from affecting layout */
     transform: none !important;
     contain: layout;
+}
+
+.documentation-content * {
+    transform: none !important;
+}
+
+.documentation-section {
+    transform: none !important;
+}
+
+.documentation-section * {
+    transform: none !important;
 }
 
 .doc-links {
@@ -260,10 +271,8 @@
 .documentation-grid {
     display: grid;
     grid-template-columns: repeat(3, 1fr);
-    gap: 10px;
+    gap: 15px;
     flex: 1;
-    /* Prevent size changes from transforms */
-    transform: none !important;
     width: 100%;
     max-width: 600px;
 }
@@ -276,21 +285,39 @@
     align-items: center;
     justify-content: center;
     border: 2px solid #999;
-    /* Ensure consistent sizing */
     width: 100%;
     height: auto;
-    min-height: 0;
+    min-height: 120px;
+    max-height: 200px;
+    overflow: hidden;
+    position: relative;
+}
+
+.doc-image img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: center;
+    border-radius: 10px;
+    display: block;
+    transition: none;
+    transform: none !important;
+}
+
+.doc-image:hover img {
+    transform: none !important;
+    scale: none !important;
 }
 
 .doc-image .image-placeholder {
     width: 100%;
     height: 100%;
-    max-width: none;
-    border: none;
-    border-radius: 10px;
-    /* Prevent image from growing */
     object-fit: cover;
-    flex-shrink: 0;
+    object-position: center;
+    border-radius: 10px;
+    display: block;
+    transition: none;
+    transform: none !important;
 }
 
 /* Thank You Section */
@@ -358,7 +385,13 @@
     
     .documentation-grid {
         grid-template-columns: repeat(2, 1fr);
-        gap: 20px;
+        gap: 12px;
+        max-width: 100%;
+    }
+    
+    .doc-image {
+        min-height: 100px;
+        max-height: 150px;
     }
     
     .project-section .section-title,
@@ -395,7 +428,15 @@
     
     .documentation-grid {
         grid-template-columns: 1fr;
-        gap: 15px;
+        gap: 10px;
+        max-width: 100%;
+    }
+    
+    .doc-image {
+        min-height: 80px;
+        max-height: 120px;
+        max-width: 300px;
+        margin: 0 auto;
     }
     
     .project-section .section-title,
