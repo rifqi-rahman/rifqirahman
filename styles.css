@@ -301,63 +301,84 @@ body {
     font-weight: 400;
 }
 
-.portfolio-grid {
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    gap: 80px;
+.carousel-container {
+    position: relative;
     max-width: 1000px;
     margin: 0 auto;
+    overflow: hidden;
 }
 
-.portfolio-column h3 {
+.carousel-track {
+    display: flex;
+    transition: transform 0.5s ease-in-out;
+}
+
+.carousel-slide {
+    flex: 0 0 33.33%;
+    padding: 0 15px;
+}
+
+.portfolio-card {
+    background: #fff;
+    border: 2px dashed #333;
+    padding: 20px;
+    text-align: center;
+}
+
+.portfolio-card-img {
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+    margin-bottom: 20px;
+}
+
+.portfolio-card-title {
     font-size: 20px;
     font-weight: 500;
-    margin-bottom: 25px;
+    margin-bottom: 10px;
     color: #333;
 }
 
-.personal-design-title {
-    margin-top: 35px !important;
-}
-
-.portfolio-items {
-    list-style: none;
-}
-
-.portfolio-item {
-    display: flex;
-    align-items: flex-start;
-    margin-bottom: 18px;
-    gap: 12px;
-}
-
-.item-number {
-    font-size: 18px;
+.portfolio-card-description {
+    font-size: 16px;
     color: #333;
-    min-width: 25px;
-    font-weight: 400;
-}
-
-.item-content {
-    flex: 1;
-}
-
-.item-title {
-    color: #333;
-    font-weight: 500;
-    font-size: 18px;
-}
-
-.item-title:hover {
-    color: #0000FF;
-    text-decoration: underline;
-}
-
-.item-description {
-    color: #333;
-    font-size: 18px;
     font-style: italic;
-    font-weight: 400;
+    margin-bottom: 20px;
+}
+
+.portfolio-card-button {
+    display: inline-block;
+    background: #333;
+    color: #fff;
+    padding: 10px 20px;
+    text-decoration: none;
+    border-radius: 5px;
+    transition: background 0.3s ease;
+}
+
+.portfolio-card-button:hover {
+    background: #0000FF;
+}
+
+.carousel-button {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    background-color: #fff;
+    border: 2px dashed #333;
+    color: #333;
+    font-size: 24px;
+    padding: 10px 15px;
+    cursor: pointer;
+    z-index: 100;
+}
+
+.prev-button {
+    left: -50px;
+}
+
+.next-button {
+    right: -50px;
 }
 
 /* Education Section */

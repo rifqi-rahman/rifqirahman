@@ -1,42 +1,3 @@
-// Rotating hero title text
-const rotatingText = () => {
-    const heroTitle = document.querySelector('.hero-title');
-    if (!heroTitle) return;
-
-    const textOptions = [
-        { text: 'Creative Designer', class: 'creative-designer' },
-        { text: 'Vibe Coder', class: 'vibe-coder' },
-        { text: 'Start-up Founder', class: 'startup-founder' },
-        { text: 'T-Shape Developer', class: 'tshape-developer' },
-        { text: 'Product Engineer', class: 'product-engineer' }
-    ];
-
-    let currentIndex = 0;
-
-    const updateText = () => {
-        const currentOption = textOptions[currentIndex];
-        
-        // Remove all previous classes
-        heroTitle.className = 'hero-title';
-        
-        // Add new class and update text
-        heroTitle.classList.add(currentOption.class);
-        heroTitle.textContent = currentOption.text;
-        
-        // Move to next option
-        currentIndex = (currentIndex + 1) % textOptions.length;
-    };
-
-    // Set initial text
-    updateText();
-    
-    // Start rotation
-    setInterval(updateText, 500); // Change every 0.5 seconds
-};
-
-// Initialize rotating text when DOM is loaded
-document.addEventListener('DOMContentLoaded', rotatingText);
-
 // Smooth scrolling for navigation links
 document.querySelectorAll('a[href^="#"]').forEach(anchor => {
     anchor.addEventListener('click', function (e) {
@@ -54,6 +15,11 @@ document.querySelectorAll('a[href^="#"]').forEach(anchor => {
         }
     });
 });
+
+// // function to sum two number
+// function sum(a, b) {
+//     return a + b;
+// }
 
 // Add active class to navigation links based on scroll position
 window.addEventListener('scroll', () => {
@@ -108,8 +74,9 @@ const observer = new IntersectionObserver((entries) => {
 document.addEventListener('DOMContentLoaded', () => {
     const sections = document.querySelectorAll('section');
     sections.forEach(section => {
-        // Skip sections with documentation content to prevent layout issues
-        if (section.querySelector('.documentation-content')) {
+        // Skip animation for documentation section to prevent image scaling issues
+        if (section.classList.contains('documentation') || 
+            section.querySelector('.documentation-content')) {
             return;
         }
         
@@ -131,50 +98,17 @@ document.addEventListener('DOMContentLoaded', () => {
     });
 });
 
-// Carousel functionality
-document.addEventListener('DOMContentLoaded', () => {
-    const track = document.querySelector('.carousel-track');
-    if (!track) return;
-    const slides = Array.from(track.children);
-    const nextButton = document.querySelector('.next-button');
-    const prevButton = document.querySelector('.prev-button');
-    const slideWidth = slides[0].getBoundingClientRect().width;
-
-    let currentIndex = 0;
-
-    const moveToSlide = () => {
-        track.style.transform = `translateX(-${currentIndex * slideWidth}px)`;
+// Mobile menu toggle (if needed in future)
+const createMobileMenu = () => {
+    const navbar = document.querySelector('.navbar');
+    const navContainer = document.querySelector('.nav-container');
+    
+    if (window.innerWidth <= 768) {
+        navbar.classList.add('mobile');
+    } else {
+        navbar.classList.remove('mobile');
     }
+};
 
-    const updateButtons = () => {
-        if (currentIndex === 0) {
-            prevButton.style.display = 'none';
-        } else {
-            prevButton.style.display = 'block';
-        }
-
-        if (currentIndex >= slides.length - 3) {
-            nextButton.style.display = 'none';
-        } else {
-            nextButton.style.display = 'block';
-        }
-    }
-
-    nextButton.addEventListener('click', e => {
-        if (currentIndex < slides.length - 3) {
-            currentIndex++;
-            moveToSlide();
-            updateButtons();
-        }
-    });
-
-    prevButton.addEventListener('click', e => {
-        if (currentIndex > 0) {
-            currentIndex--;
-            moveToSlide();
-            updateButtons();
-        }
-    });
-
-    updateButtons();
-});
+window.addEventListener('resize', createMobileMenu);
+document.addEventListener('DOMContentLoaded', createMobileMenu);
