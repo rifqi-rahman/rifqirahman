@@ -138,7 +138,18 @@ document.addEventListener('DOMContentLoaded', () => {
     const slides = Array.from(track.children);
     const nextButton = document.querySelector('.next-button');
     const prevButton = document.querySelector('.prev-button');
-    const slideWidth = slides[0].getBoundingClientRect().width;
+    
+    let slidesPerView = 3;
+    const getSlidesPerView = () => {
+        if (window.innerWidth <= 768) {
+            return 1;
+        }
+        return 3;
+    }
+
+    // Calculate slide width dynamically, considering padding/margin
+    const getSlideWidth = () => slides[0].getBoundingClientRect().width;
+    let slideWidth = getSlideWidth();
 
     let currentIndex = 0;
 
@@ -147,34 +158,53 @@ document.addEventListener('DOMContentLoaded', () => {
     }
 
     const updateButtons = () => {
-        if (currentIndex === 0) {
-            prevButton.style.display = 'none';
-        } else {
-            prevButton.style.display = 'block';
+        if (prevButton) {
+            prevButton.style.display = (currentIndex === 0) ? 'none' : 'block';
         }
-
-        if (currentIndex >= slides.length - 3) {
-            nextButton.style.display = 'none';
-        } else {
-            nextButton.style.display = 'block';
+        if (nextButton) {
+            // Show next button only if there are more slides to show
+            nextButton.style.display = (currentIndex >= slides.length - slidesPerView) ? 'none' : 'block';
         }
     }
 
-    nextButton.addEventListener('click', e => {
-        if (currentIndex < slides.length - 3) {
-            currentIndex++;
-            moveToSlide();
-            updateButtons();
-        }
+    // Recalculate slide width on window resize
+    window.addEventListener('resize', () => {
+        slidesPerView = getSlidesPerView();
+        slideWidth = getSlideWidth();
+        moveToSlide(); // Adjust position after resize
+        updateButtons();
     });
 
-    prevButton.addEventListener('click', e => {
-        if (currentIndex > 0) {
-            currentIndex--;
-            moveToSlide();
-            updateButtons();
-        }
-    });
+    if (nextButton) {
+        nextButton.addEventListener('click', e => {
+            if (currentIndex < slides.length - slidesPerView) { 
+                currentIndex++;
+                moveToSlide();
+                updateButtons();
+            }
+        });
+    }
+
+    if (prevButton) {
+        prevButton.addEventListener('click', e => {
+            if (currentIndex > 0) {
+                currentIndex--;
+                moveToSlide();
+                updateButtons();
+            }
+        });
+    }
 
     updateButtons();
+
+    // Automatic scrolling
+    setInterval(() => {
+        if (currentIndex < slides.length - slidesPerView) { // Check if there are more slides to scroll to
+            currentIndex++;
+        } else {
+            currentIndex = 0; // Loop back to the beginning
+        }
+        moveToSlide();
+        updateButtons();
+    }, 5000); // Change slide every 5 seconds
 });
